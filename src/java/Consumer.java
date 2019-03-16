@@ -63,10 +63,10 @@ public class Consumer {
                 if (unreadMessages() > 0) {
                     String message = read();
                     if (UtilCompare.isEmpty(goNext(redisTransaction))) {
-                        continue;
+                        continue;// 自增失败重新读取
                     }
                     if (message == null) {
-                        continue;
+                        continue;// 读取失败重新读取
                     }
                     return JSON.parseObject(message, RedisMessageModel.class);
                 }
