@@ -3,9 +3,7 @@ import com.alibaba.fastjson.JSON;
 import java.util.List;
 
 /**
- * @author: yzh
- * @date: 2018/10/8 17:26
- * @description: 生产者
+ * 生产方
  */
 public class Producer {
     protected static final String TOPIC_MESSAGE_CACHETYPE = "queueId_message";

@@ -1,11 +1,6 @@
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author: yzh
- * @date: 2018/10/10 20:03
- * @description: 中间转换层
- */
 public class RedisMessageModel implements Serializable{
     private static final long serialVersionUID = 3932005310385815528L;
     /** 主键id */

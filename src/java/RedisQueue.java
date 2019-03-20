@@ -5,11 +5,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 
-/**
- * @author: yzh
- * @date: 2018/10/9 15:50
- * @description: 自定义的redisQueue
- */
 public class RedisQueue {
 
     private static final String PREFIX = "redisMq:";

@@ -3,9 +3,7 @@ import com.alibaba.fastjson.JSON;
 import java.util.List;
 
 /**
- * @author: yzh
- * @date: 2018/10/8 17:26
- * @description: 订阅方
+ * 订阅方
  */
 public class Consumer {
 
@@ -92,6 +90,8 @@ public class Consumer {
      */
     private int getLastReadMessage() {
         String lastMessageRead = subscribersRedisQueue.get();
+        // 如果是新注册上来的consumer，只读取最后一条消息
+        // TODO 配置新注册的consumer是读取最后一条还是全部消息
         if (UtilCompare.isEmpty(lastMessageRead)) {
             int lowest = getTopicSize() - 1;
             subscribersRedisQueue.set(String.valueOf(lowest), DEFALUT_EXPIRETIME);
